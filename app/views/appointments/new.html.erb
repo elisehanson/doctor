@@ -1,13 +1,8 @@
-
 <h1>Appointment New</h1>
 
-<div class="login">
-  <div class="container">
     <%= form_for :appointment, url: '/appointments' do |f| %>
 		<%= f.collection_select :doctor_id, Doctor.all, :id, :fname %>
       <%= f.text_field :room, :placeholder => 'room number' %> 
       <%= f.datetime_field :time, :value => Time.now.strftime('%Y-%m-%d') %>
       <%= f.submit "Schedule", :class => "form-btn" %>
     <% end %>
-  </div>
-</div>
