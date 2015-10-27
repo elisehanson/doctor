@@ -1,0 +1,16 @@
+
+<h1>Doctor New</h1>
+
+<div class="login">
+  <div class="container">
+    <%= form_for :doctor, url: '/doctors' do |f| %>
+      <%= f.text_field :fname, :placeholder => 'First Name' %>
+      <%= f.text_field :lname, :placeholder => 'Last Name' %>
+      <%= f.text_field :specialty, :placeholder => 'Specialty' %> 
+      <%= f.password_field :password, :placeholder => 'Password' %> 
+      <%= f.submit "Sign up", :class => "form-btn" %>
+    <% end %>
+  </div>
+</div>
+
+

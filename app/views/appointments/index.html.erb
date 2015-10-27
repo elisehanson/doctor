@@ -1,0 +1,19 @@
+<h1>Appt Index</h1>
+
+<h3><em>list of all the appointments</em></h3> <p>
+
+
+<ul>
+<% @appointments.each do |appointment| %>
+  <li>  
+    <strong>Doctor Id:</strong> <%= appointment.doctor_id %><br />
+    <strong>Patient Id:</strong> <%= appointment.patient_id %><br />
+    <strong>Time:</strong> <%= appointment.time %><br />
+    <strong>Room:</strong> <%= appointment.room %></br /><p>
+
+       <!--  <td><%= link_to 'Destroy', method: :delete %></td>  -->
+
+  </li>
+  <hr />
+<% end %>
+</ul>

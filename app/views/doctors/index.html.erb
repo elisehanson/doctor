@@ -1,0 +1,17 @@
+<h1>Doctor Index</h1>
+<h3><em>list of all the doctors</h3></em><p>
+
+
+<ul>
+<% @doctors.each do |doctor| %>
+  <li>  
+    <strong>Doctor Id:</strong> <%= doctor.id %><br />
+    <strong>First Name:</strong> <%= doctor.fname %><br />
+    <strong>Last Name:</strong> <%= doctor.lname %><br />
+    <strong>Specialty:</strong> <%= doctor.specialty %></br />
+
+
+  </li>
+  <hr />
+<% end %>
+</ul>

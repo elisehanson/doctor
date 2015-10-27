@@ -1,0 +1,25 @@
+
+<h1>Patient New</h1>
+
+<div class="login">
+  <div class="container">
+    <%= form_for :patient, url: '/patients' do |f| %>
+      <%= f.text_field :email, :placeholder => 'Email' %>  </Br>
+      <%= f.text_field :fname, :placeholder => 'First Name' %>  </Br>
+      <%= f.text_field :lname, :placeholder => 'Last Name' %>  </Br>
+      <%= f.text_field :illness, :placeholder => 'Illness' %>  </Br>
+      <%= f.password_field :password, :placeholder => 'Password' %>   </Br>
+      <%= f.submit "Sign up", :class => "form-btn" %>
+    <% end %>
+  </div>
+</div>
+
+
+<% if @patient.errors.full_messages.any? %>
+   <ul>
+        <% @patient.errors.full_messages.each do |error_message| %>
+       <li><%= error_message%></li>
+       <br />
+<% end %>   
+</ul> 
+<% end %>

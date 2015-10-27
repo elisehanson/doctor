@@ -1,0 +1,11 @@
+<h1>doctor Edit</h1>
+
+
+
+    <%= form_for :doctor, method: :put do |f| %>
+      <%= f.text_field :fname, :placeholder => 'First Name' %>
+      <%= f.text_field :lname, :placeholder => 'Last Name' %>
+      <%= f.text_field :specialty, :placeholder => 'Specialty' %> 
+      <%= f.password_field :password, :placeholder => 'Password' %> 
+      <%= f.submit  %>
+      <% end %>

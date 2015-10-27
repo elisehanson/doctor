@@ -1,0 +1,18 @@
+<h1>Patient Index</h1>
+<h3><em>list of all the patients</em></h3>
+
+
+<ul>
+<% @patients.each do |patient| %>
+  <li>  
+  	<strong>Patient Email:</strong> <%= patient.email %><br />
+    <strong>Patient Id:</strong> <%= patient.id %><br />
+    <strong>First Name:</strong> <%= patient.fname %><br />
+    <strong>Last Name:</strong> <%= patient.lname %><br />
+    <strong>Illness:</strong> <%= patient.illness %></br />
+
+
+  </li>
+  <hr />
+<% end %>
+</ul>

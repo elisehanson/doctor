@@ -1,0 +1,10 @@
+<h1>Patient Show</h1>
+
+<strong>Id:</strong> <%= @patient.id %><br />
+<strong>Email:</strong> <%= @patient.email %><br />
+<strong>First Name:</strong> <%= @patient.fname %><br />
+<strong>Last Name:</strong> <%= @patient.lname %><br />
+<strong>Password:</strong> <%= @patient.password %><br />
+
+<%= link_to "Edit User", edit_patient_path(@patient) %>
+<%= link_to "Delete User", patient_path(@patient), method: :delete %>

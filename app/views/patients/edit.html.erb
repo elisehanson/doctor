@@ -1,0 +1,10 @@
+<h1>Patient Edit</h1>
+
+	<%= form_for :patient, method: :put do |f| %>
+		<%= f.text_field :email, :placeholder => 'Email' %> <br>
+		<%= f.text_field :fname, :placeholder => 'First Name' %> <br>
+		<%= f.text_field :lname, :placeholder => 'Last Name' %> <br>
+		<%= f.text_field :illness, :placeholder => 'Specialty' %> <br>
+		<%= f.password_field :password, :placeholder => 'Password' %> <br>
+		<%= f.submit %>
+	<% end %>
