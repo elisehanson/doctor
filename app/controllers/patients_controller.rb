@@ -30,7 +30,8 @@ class PatientsController < ApplicationController
   # update action
   def update
     @patient = Patient.find params[:id]
-    @patient.update_attributes params[:patient]
+    @patient.update_attributes(params.require(:patient).permit(:email, :fname, :lname, :illness, :password))
+    flash[:notice] = "Updated!"
     redirect_to edit_patient_path
   end
 

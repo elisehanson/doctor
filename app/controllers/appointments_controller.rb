@@ -6,6 +6,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new(user_params)
+    @appointment.patient_id = current_patient.id if current_patient
       if @appointment.save
         session[:appointment_id] = @appointment.id
         redirect_to appointments_path
